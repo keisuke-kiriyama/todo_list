@@ -1,0 +1,44 @@
+@import url('./todo-form.css');
+@import url('./todos.css');
+@import url('./todo-footer.css');
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-bg: #111111;
+    --header-height: 50px;
+    --eyecatch-height: 130px;
+}
+
+.eyecatch {
+    background-color: orange;
+    height: var(--eyecatch-height);
+    line-height: var(--eyecatch-height);
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+main {
+    padding-top: var(--header-height);
+}
+
+header {
+    background-color: var(--header-bg);
+    height: var(--header-height);
+    position: fixed;
+    width: 100vw;
+}
+
+footer {
+    border-top: 1px solid gray;
+    height: 50px;
+    position: fized;
+    width: 100vw;
+}
