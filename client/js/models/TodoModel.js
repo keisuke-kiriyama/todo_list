@@ -35,12 +35,16 @@ const TodoCollection = {
         return newTodo
     },
 
-    update(id, done) {
-        // TODO: API通信
+    async update(id, done) {
         const target = this.todos.find(todo => todo.id == id)
-        console.log('before', target)
+        const resp = await fetch(`/todos/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json; charset=utf-8",
+            },
+            body: JSON.stringify({ name: target.name, done })
+        }).then((res) => res.json())
         target.update(target.name, done)
-        console.log('after', target)
         return target
     }
 }
