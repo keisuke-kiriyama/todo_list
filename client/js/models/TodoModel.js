@@ -46,6 +46,11 @@ const TodoCollection = {
         }).then((res) => res.json())
         target.update(target.name, done)
         return target
+    },
+
+    async delete(id) {
+        await fetch(`/todos/${id}`, { method: 'DELETE' })
+        this.todos = this.todos.filter((todo) => !(todo.id === parseInt(id)))
     }
 }
 
