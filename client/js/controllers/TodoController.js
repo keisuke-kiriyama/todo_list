@@ -16,6 +16,12 @@ const TodoController = {
         const form = new TodoForm()
         form.mount()
     },
+
+    create(name) {
+        const todo = TodoCollection.create(name)
+        const view = new Todo({ ...todo })
+        view.mount()
+    },
 }
 
 export default TodoController
