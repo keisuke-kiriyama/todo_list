@@ -4,7 +4,8 @@
   "description": "javascript practice",
   "main": "index.js",
   "scripts": {
-    "start": "agreed-server --path ./spec/entry.js --port 3000 --static ./"
+    "start": "node app.js",
+    "agreed": "agreed-server --path ./spec/entry.js --port 3000 --static ./"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/keisuke-kiriyama/todo_list/issues"
   },
-  "homepage": "https://github.com/keisuke-kiriyama/todo_list#readme"
+  "homepage": "https://github.com/keisuke-kiriyama/todo_list#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
