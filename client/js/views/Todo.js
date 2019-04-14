@@ -22,6 +22,7 @@ class Todo {
 
     mount() {
         this.parent.appendChild(this.element)
+        this.element.addEventListener('change', () => console.log('checked!!!'))
     }
 }
 
