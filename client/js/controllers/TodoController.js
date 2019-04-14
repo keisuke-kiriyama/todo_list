@@ -17,8 +17,8 @@ const TodoController = {
         form.mount()
     },
 
-    create(name) {
-        const todo = TodoCollection.create(name)
+    async create(name) {
+        const todo = await TodoCollection.create(name)
         const view = new Todo({ ...todo })
         view.mount()
     },

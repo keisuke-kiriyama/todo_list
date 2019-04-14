@@ -17,9 +17,15 @@ const TodoCollection = {
         return this.todos
     },
 
-    create(name) {
-        // TODO: API通信
-        const newTodo = new TodoModel({ id: 0, name})
+    async create(name) {
+        const resp = await fetch('/todos', {
+            method: 'post',
+            headers: {
+                "Content-Type": "application/json; charset=utf-8",
+            },
+            body: JSON.stringify({ name }),
+        }).then((res) => res.json())
+        const newTodo = new TodoModel({ id: resp.id, name: resp.name })
         this.todos.push(newTodo)
         return newTodo
     }
