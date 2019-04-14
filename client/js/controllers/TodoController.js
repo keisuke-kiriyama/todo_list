@@ -22,6 +22,10 @@ const TodoController = {
         const view = new Todo({ ...todo })
         view.mount()
     },
+
+    update(id, done) {
+        TodoCollection.update(id, done)
+    }
 }
 
 export default TodoController
