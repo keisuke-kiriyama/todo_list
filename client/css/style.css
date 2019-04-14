@@ -39,6 +39,6 @@ header {
 footer {
     border-top: 1px solid gray;
     height: 50px;
-    position: fized;
+    position: fixed;
     width: 100vw;
 }

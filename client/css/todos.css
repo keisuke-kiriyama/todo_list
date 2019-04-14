@@ -81,6 +81,28 @@
     background-color: #2196F3;
 }
 
+.todo-toggle__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.todo-toggle__container input:checked ~ .todo-toggle__checkmark:after {
+    display: block;
+}
+
+.todo-toggle__container .todo-toggle__checkmark:after {
+    left: 13px;
+    top: 5px;
+    width: 10px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 .todo-name {
     padding-left: 20px;
     width: 400px;
